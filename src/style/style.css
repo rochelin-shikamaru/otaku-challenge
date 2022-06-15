@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap");
+main {
+  width: Min(98%, 700px);
+  min-height: 600px;
+  background-color: #F5F7FB;
+  margin: 40px 0 75px 0;
+  padding: 40px 75px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  border: none;
+  width: 193px;
+  height: 52px;
+  color: #F5F7FB;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #4D5B9E;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button:active {
+  -webkit-box-shadow: inset 5px 5px 5px #16191b;
+          box-shadow: inset 5px 5px 5px #16191b;
+}
+
+.blob-blue {
+  background: url("../../public/assets/blob-blue.svg");
+  background-position: bottom;
+  left: 0;
+  bottom: 0;
+  width: 148px;
+  height: 148px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.blob-yellow {
+  width: 148px;
+  height: 148px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  background: url("../../public/assets/blob-yellow.svg");
+  background-position: top;
+  right: 0;
+  top: 0;
+}
+
+.home {
+  width: 25.75rem;
+  height: 12.5rem;
+  color: #293264;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home h1 {
+  font-size: 1.9rem;
+}
+
+.home p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.quizz {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+aside .container_current_answers {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+aside .container_current_answers h1 {
+  color: #293264;
+  font-weight: 700;
+}
+
+aside .container_current_answers .current_answers {
+  min-width: 60px;
+  text-align: center;
+  padding: 3px 10px;
+  border: 0.794239px solid #4D5B9E;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 12px 0 15px 0;
+  margin-inline: 7px;
+}
+
+aside .container_current_answers .current_answers p {
+  color: #293264;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+aside .border {
+  width: 100%;
+  height: 1px;
+  border: 0.794239px solid #DBDEF0;
+  -webkit-transform: rotate(-0.05deg);
+          transform: rotate(-0.05deg);
+  margin-bottom: 15px;
+}
+
+.container-button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #16191b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */

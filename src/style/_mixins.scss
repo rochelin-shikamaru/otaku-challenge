@@ -1,0 +1,13 @@
+@mixin flexbox ($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin blob {
+    width: 148px;
+    height: 148px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}

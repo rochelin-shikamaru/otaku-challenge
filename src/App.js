@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState } from 'react'
+import Blob from './Blob'
+import Home from './Home'
+import Quizz from './Quizz';
 
-function App() {
+const App = () => {
+  const [showHome, setShowHome] = useState(true);
+  const [data, setData] = useState([]);
+
+  useEffect(()=>{
+      async function fetchData (){
+          const response = await fetch("https://opentdb.com/api.php?amount=10&category=31&type=multiple");
+          const datas = await response.json();
+          setData(datas.results);
+          
+      }
+      fetchData();
+  }, [])
+
+  const updateShowHome = () =>{
+    setShowHome(prevShowHome => !prevShowHome);
+  }
+
+  const selectAnswers = () =>{
+    
+  }
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <Blob />
+      {showHome ? <Home handleClick={updateShowHome}/> : <Quizz datas={data}/>}
+    </main>
+  )
 }
 
-export default App;
+export default App
