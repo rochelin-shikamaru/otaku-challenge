@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Blob = () => {
+const Blob = ({showHome}) => {
   return (
     <>
-        <div className='blob-blue'></div>
-        <div className='blob-yellow'></div>
+        <div className={showHome ? "blob-blue" : "blob-blue--small"}></div>
+        <div className={showHome ? "blob-yellow" : "blob-yellow--small"}></div>
     </>
   )
 }

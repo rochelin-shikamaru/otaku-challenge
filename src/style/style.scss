@@ -1,6 +1,7 @@
 @import'./mixins';
 @import'../style/app';
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 *{
     margin: 0;
@@ -11,8 +12,18 @@
 #root{
     width: 100%;
     min-height: 100vh;
-    background-color:   #16191b ;
+    background-image: url('../../public/assets/otaku1\(1\).jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media screen and (max-width: 490px) {
+    html{
+        font-size: 15px;
+    }
 }

@@ -11,3 +11,9 @@
     background-size: contain;
     position: absolute;
 }
+
+@mixin blobSmall {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}

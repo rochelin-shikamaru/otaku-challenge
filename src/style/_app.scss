@@ -1,6 +1,7 @@
 main{
     width: Min(98%, 700px);
     min-height: 600px;
+    border-radius: 10px;
     background-color: #F5F7FB;
     margin: 40px 0 75px 0;
     padding: 40px 75px;
@@ -38,6 +39,25 @@ button{
     right: 0;
     top: 0;
 }
+.blob-blue--small{
+    @include blobSmall;
+    width: 65px;
+    height: 62px;
+    background: url("../../public/assets/blob-small-blue.svg");
+    background-position: bottom;
+    left: 0;
+    bottom: 0;
+    
+}
+.blob-yellow--small{
+    @include blobSmall;
+    width: 126px;
+    height: 131px;
+    background: url("../../public/assets/blob-small-yellow.svg");
+    background-position: top;
+    right: 0;
+    top: 0;
+}
 
 // Home component
 
@@ -65,15 +85,15 @@ button{
     z-index: 2;
 }
 aside{
-    
-    .container_current_answers{
+
+    h1{
+        color: #293264;
+        font-weight: 700;
+    }
+    .container_answers{
         width: 100%;
-     //   border: 1px solid red;
         @include flexbox ($justify: space-between);
-        h1{
-            color: #293264;
-            font-weight: 700;
-        }
+        //border: 1px solid red;
         .current_answers{
             min-width: 60px;
             text-align: center;
@@ -81,16 +101,13 @@ aside{
             border: 0.794239px solid #4D5B9E;
             border-radius: 8px;
             cursor: pointer;
-            margin: 12px 0 15px 0;
-            margin-inline: 7px;
-            p{
-                color: #293264;
-                font-size: 0.7rem;
-                font-weight: 500;
-            }
-            
+            margin: 12px 7px 15px 7px;
+            color: #293264;
+            font-size: 0.7rem;
+            font-weight: 500; 
         }
     }
+
     .border{
         width: 100%;
         height: 1px;
@@ -103,4 +120,99 @@ aside{
 .container-button{
     width: 100%;
     @include flexbox;
+}
+
+// style for correct answer and fail answer
+
+.correct_answer{
+    background-color: #94D7A2;
+    border-color: #94D7A2;
+    min-width: 60px;
+    text-align: center;
+    padding: 3px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 12px 0 15px 0;
+    margin-inline: 7px;
+    color: #293264;
+    font-size: 0.7rem;
+    font-weight: 500; 
+}
+
+// submit Component
+
+.score{
+    font-size: 1rem;
+    color:#293264;;
+    font-weight: 700;
+    margin-right: 25px;
+}
+.opacity_answer{
+    opacity: 0.5;
+}
+
+// setting support coffe
+.coffee{
+    width: 80%;
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+    color: #F5F7FB;
+    background-color: #4D5B9E;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 40px auto;
+    font-family: 'Cookie', cursive;
+    @include flexbox;
+    svg{
+        margin-left: 5px;
+    }
+}
+// loading data 
+
+.dots {
+    width: 56px;
+    height: 26.9px;
+    background: radial-gradient(circle closest-side,#293264 90%,#0000) 0%   50%,
+           radial-gradient(circle closest-side,#293264 90%,#0000) 50%  50%,
+           radial-gradient(circle closest-side,#293264 90%,#0000) 100% 50%;
+    background-size: calc(100%/3) 13.4px;
+    background-repeat: no-repeat;
+    animation: dots-7ar3yq 1s infinite linear;
+ }
+ 
+ @keyframes dots-7ar3yq {
+    20% {
+       background-position: 0%   0%, 50%  50%,100%  50%;
+    }
+ 
+    40% {
+       background-position: 0% 100%, 50%   0%,100%  50%;
+    }
+ 
+    60% {
+       background-position: 0%  50%, 50% 100%,100%   0%;
+    }
+ 
+    80% {
+       background-position: 0%  50%, 50%  50%,100% 100%;
+    }
+ }
+
+// all media device resize
+
+@media screen and (max-width: 768px) {
+    main{
+        padding: 40px 10px;
+    }
+    .container_answers{
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    aside .container_answers .current_answers{
+        margin: 10px;
+    }
+    .coffee{
+        padding: 10px;
+        text-align: center;
+    }
 }
